@@ -1,0 +1,6 @@
+{
+  "parent": "breezebounce:block/template_basic_bounce_wall",
+  "textures": {
+    "all": "breezebounce:block/basic_bounce_wall_light_blue_powered"
+  }
+}

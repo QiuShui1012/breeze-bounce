@@ -1,0 +1,10 @@
+{
+  "variants": {
+    "powered=false": {
+      "model": "breezebounce:block/basic_bounce_wall_white"
+    },
+    "powered=true": {
+      "model": "breezebounce:block/basic_bounce_wall_white_powered"
+    }
+  }
+}

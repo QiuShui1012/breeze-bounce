@@ -1,0 +1,10 @@
+{
+  "variants": {
+    "powered=false": {
+      "model": "breezebounce:block/basic_bounce_cyan"
+    },
+    "powered=true": {
+      "model": "breezebounce:block/basic_bounce_cyan_powered"
+    }
+  }
+}

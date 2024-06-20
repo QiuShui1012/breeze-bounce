@@ -1,0 +1,32 @@
+{
+  "parent": "minecraft:recipes/root",
+  "criteria": {
+    "has_basic_bounce_magenta": {
+      "conditions": {
+        "items": [
+          {
+            "items": "breezebounce:basic_bounce_magenta"
+          }
+        ]
+      },
+      "trigger": "minecraft:inventory_changed"
+    },
+    "has_the_recipe": {
+      "conditions": {
+        "recipe": "minecraft:basic_bounce_wall_magenta"
+      },
+      "trigger": "minecraft:recipe_unlocked"
+    }
+  },
+  "requirements": [
+    [
+      "has_the_recipe",
+      "has_basic_bounce_magenta"
+    ]
+  ],
+  "rewards": {
+    "recipes": [
+      "minecraft:basic_bounce_wall_magenta"
+    ]
+  }
+}

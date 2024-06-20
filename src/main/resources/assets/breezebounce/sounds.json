@@ -1,0 +1,28 @@
+{
+  "bounce_block_inflate": {
+    "subtitle": "breezebounce.subtitles.bounce_block_inflate",
+    "sounds": [
+      "breezebounce:bounce_block_inflate"
+    ]
+  },
+  "bounce_block_deflate": {
+    "subtitle": "breezebounce.subtitles.bounce_block_deflate",
+    "sounds": [
+      "breezebounce:bounce_block_deflate"
+  ]
+  },
+  "bounce_block_bounce": {
+    "subtitle": "breezebounce.subtitles.bounce_block_bounce",
+    "sounds": [
+      "breezebounce:bounce_block_bounce_0",
+      "breezebounce:bounce_block_bounce_1"
+    ]
+  },
+  "bounce_block_step": {
+    "subtitle": "breezebounce.subtitles.bounce_block_step",
+    "sounds": [
+      "breezebounce:bounce_block_step_0",
+      "breezebounce:bounce_block_step_1"
+    ]
+  }
+}
