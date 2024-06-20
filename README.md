@@ -81,3 +81,4 @@ are outside my ability for now. I will implement them after Modfest with more ti
 
 ***Known Bugs***
 - Some Funky collisions in corners with AbstractBreezeBlocks
+- When bouncing while sliding on ice you stop after a short time
