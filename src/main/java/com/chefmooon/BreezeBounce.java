@@ -1,6 +1,7 @@
 package com.chefmooon;
 
 import com.chefmooon.registry.*;
+import com.chefmooon.util.CommonSetup;
 import net.fabricmc.api.ModInitializer;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
@@ -17,6 +18,8 @@ public class BreezeBounce implements ModInitializer {
 		ModItemsRegistry.register();
 		ModParticlesRegistry.register();
 		ModSoundsRegistry.register();
+
+		CommonSetup.init();
 
 	}
 }

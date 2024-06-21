@@ -3,9 +3,7 @@
     <img src="breeze_bounce_banner_icon.gif" alt="Banner Icon">
 </div>
 
-<h1 style="text-align: center;">Breeze Bounce<br>
-
-</h1>
+<h1 style="text-align: center;">Breeze Bounce<br></h1>
 
 This mod is created for [Modfest: Carnival](https://modfest.net/carnival)!
 
@@ -16,7 +14,7 @@ create crazy trampoline courses.
 ***
 ***Bounce Block***
 
-This Wind Charge infused, wool-like block bounce entities that touch any of its sides. 
+This Wind Charge-infused, wool-like block bounces entities that touch any of its sides. 
 It has an 'Inflated' state triggered by a wind charge strike, temporarily increasing its 
 bounce power for a set duration.
 
@@ -29,6 +27,7 @@ bounce power for a set duration.
 
 ***Technical Info***
 - Block becomes inflated for 80 ticks when struck by a Wind Charge
+- Block is flammable and can be ignited by Lava
 - Custom Sounds
   - When Player jumps
   - When Player bounces all sides 

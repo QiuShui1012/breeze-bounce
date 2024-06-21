@@ -37,14 +37,11 @@ public class BreezeBounceWallBlock extends AbstractBreezeBounceBlock {
         Direction[] directions = Direction.values();
 
         for (Direction direction : directions) {
-            BlockPos blockPos2 = blockPos.relative(direction);
-            if (!level.getBlockState(blockPos2).isSolidRender(level, blockPos2)) {
-                Direction.Axis axis = direction.getAxis();
-                double e = axis == Direction.Axis.X ? 0.5 + d * (double) direction.getStepX() : (double) randomSource.nextFloat();
-                double f = axis == Direction.Axis.Y ? 0.5 + d * (double) direction.getStepY() : (double) randomSource.nextFloat();
-                double g = axis == Direction.Axis.Z ? 0.5 + d * (double) direction.getStepZ() : (double) randomSource.nextFloat();
-                level.addParticle(ModParticlesRegistry.BOUNCE_WHITE, (double) blockPos.getX() + e, (double) blockPos.getY() + f, (double) blockPos.getZ() + g, 0.0, 0.0, 0.0);
-            }
+            Direction.Axis axis = direction.getAxis();
+            double e = axis == Direction.Axis.X ? 0.5 + d * (double) direction.getStepX() : (double) randomSource.nextFloat();
+            double f = axis == Direction.Axis.Y ? 0.5 + d * (double) direction.getStepY() : (double) randomSource.nextFloat();
+            double g = axis == Direction.Axis.Z ? 0.5 + d * (double) direction.getStepZ() : (double) randomSource.nextFloat();
+            level.addParticle(ModParticlesRegistry.BOUNCE_WHITE, (double) blockPos.getX() + e, (double) blockPos.getY() + f, (double) blockPos.getZ() + g, 0.0, 0.0, 0.0);
         }
     }
 }

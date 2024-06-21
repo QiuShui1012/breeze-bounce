@@ -11,14 +11,13 @@ import java.util.concurrent.CompletableFuture;
 
 public class TranslationGenerator extends FabricLanguageProvider {
 
-    private static String SUBTITLE = BreezeBounce.MOD_ID + ".subtitles.";
-
     protected TranslationGenerator(FabricDataOutput dataOutput, CompletableFuture<HolderLookup.Provider> registryLookup) {
         super(dataOutput, registryLookup);
     }
 
     @Override
     public void generateTranslations(HolderLookup.Provider registryLookup, TranslationBuilder translationBuilder) {
+        String SUBTITLE = BreezeBounce.MOD_ID + ".subtitles.";
 
         translationBuilder.add(ModCreativetabsRegistry.ITEM_GROUP, "Breeze Bounce");
 

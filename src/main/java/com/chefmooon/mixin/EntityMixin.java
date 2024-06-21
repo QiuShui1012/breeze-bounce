@@ -17,7 +17,7 @@ import org.spongepowered.asm.mixin.injection.callback.CallbackInfo;
 @Mixin(Entity.class)
 public abstract class EntityMixin {
 
-    // TODO - is this the best option for collision detection? Similar to block.updateEntityAfterFallOn()
+    // note - is this the best option for collision detection? Similar to block.updateEntityAfterFallOn(), Might rework
     @Inject(method = "Lnet/minecraft/world/entity/Entity;move(Lnet/minecraft/world/entity/MoverType;Lnet/minecraft/world/phys/Vec3;)V", at = @At("TAIL"))
     public void bounceBack(MoverType moverType, Vec3 vec3, CallbackInfo ci) {
         Entity entity = (Entity) (Object) this;
@@ -84,6 +84,6 @@ public abstract class EntityMixin {
     }
 
     private boolean isStanding(Entity entity) {
-        return entity.getEyeHeight() > 0.5f; // todo - test on smaller entities. is 1.0f better?
+        return entity.getEyeHeight() > 0.5f;
     }
 }

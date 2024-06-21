@@ -54,11 +54,8 @@ public class AbstractBreezeBounceBlock extends Block {
         } else {
             entity.causeFallDamage(f, 0.0F, level.damageSources().fall());
         }
-        if (f > DOUBLE_JUMP_ACTIVATION_THRESHOLD) {
-            //tryDoubleJumpSpread(level, blockState, blockPos, entity);
-        }
-        // todo - would rather use (Math.abs(entity.getDeltaMovement().y) > DOUBLE_JUMP_ACTIVATION_THRESHOLD)
-        // todo - double jump is busted
+        // todo - bug - double jump, need to change implementation?
+        //if (f > DOUBLE_JUMP_ACTIVATION_THRESHOLD) tryDoubleJumpSpread(level, blockState, blockPos, entity);
     }
 
     private void tryDoubleJumpSpread(Level level, BlockState blockState, BlockPos blockPos, Entity entity) {
@@ -102,7 +99,6 @@ public class AbstractBreezeBounceBlock extends Block {
                 entity.setDeltaMovement(vec3.x, VERTICAL_TERMINAL_VELOCITY, vec3.z);
             }
 
-            // TODO - bounce and jump sound can both be made, fix/change?
             if (vec3.y < -0.08) {
                 this.playBounceSound(entity, (float) vec3.y);
             }
@@ -190,7 +186,6 @@ public class AbstractBreezeBounceBlock extends Block {
     @Override
     public float getJumpFactor() {
         return this.jumpFactor + 0.5f;
-        // TODO add extra 0.5 jump if powered?
     }
 
     @Override
