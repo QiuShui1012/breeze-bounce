@@ -19,7 +19,7 @@ It has an 'Inflated' state triggered by a wind charge strike, temporarily increa
 bounce power for a set duration.
 
 - Recipe: 1x Wind Charge, 4x Leather, 4x Wool
-- Colours: White, Light Gray, Gray, Black, Brown, Red, Orange, Yellow, Lime, Green , 
+- Colours: White, Light Gray, Gray, Black, Brown, Red, Orange, Yellow, Lime, Green, 
   Cyan, Light Blue, Blue, Purple, Magenta, Pink
 - Block Variant(s)
   - Bounce Post Block
