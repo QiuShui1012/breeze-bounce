@@ -3,5 +3,5 @@
 
 ### Updated
 - Now Compatible with Minecraft 1.21.1
-- Breeze Bounce Walls Waterloggable (todo)
+- Breeze Bounce Walls Waterloggable
 
