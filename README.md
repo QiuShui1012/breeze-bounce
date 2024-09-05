@@ -5,7 +5,7 @@
 
 <h1 style="text-align: center;">Breeze Bounce<br></h1>
 
-This mod is created for [Modfest: Carnival](https://modfest.net/carnival)!
+[![Modfest Carnival](https://raw.githubusercontent.com/ModFest/art/v2/badge/svg/carnival/compact.svg)](https://modfest.net/carnival)
 
 Bounce to new heights with Wind-Charged blocks! Inflate them for extra spring, or use them to 
 create crazy trampoline courses.
