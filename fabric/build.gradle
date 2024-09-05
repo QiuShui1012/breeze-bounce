@@ -122,7 +122,7 @@ unifiedPublishing {
 		changelog = changelogText
 		releaseType = mod_version_type
 		gameVersions = minecraft_supported_versions.split(",").toList()
-		gameLoaders = ["fabric"]
+		gameLoaders = ["fabric","quilt"]
 
 		mainPublication tasks.remapJar
 
