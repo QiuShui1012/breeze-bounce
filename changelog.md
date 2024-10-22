@@ -1,7 +1,8 @@
+Before updating, please **back-up** your world. 
+Greatly appreciate any bug reports on the 
+[Github](https://github.com/ChefMooon/breeze-bounce/issues)
 
-**NeoForge Release!**
+**CurseForge Release!**
 
-### Updated
-- Now Compatible with Minecraft 1.21.1
-- Breeze Bounce Walls Waterloggable
+[Current Features](https://github.com/ChefMooon/breeze-bounce/blob/1.21.x-multi/README.md#current-features)
 
