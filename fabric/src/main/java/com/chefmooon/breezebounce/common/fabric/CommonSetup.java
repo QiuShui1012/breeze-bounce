@@ -1,6 +1,7 @@
 package com.chefmooon.breezebounce.common.fabric;
 
-import com.chefmooon.breezebounce.common.block.AbstractBreezeBounceBlock;
+import com.chefmooon.breezebounce.common.block.BreezeBounceBlock;
+import com.chefmooon.breezebounce.common.block.SimpleBreezeBounceBlock;
 import com.chefmooon.breezebounce.common.registry.fabric.ModBlocksImpl;
 import net.fabricmc.fabric.api.registry.FlammableBlockRegistry;
 import net.minecraft.world.level.block.Block;
@@ -29,6 +30,40 @@ public class CommonSetup {
         addBasicBounceFlammable(ModBlocksImpl.BASIC_BOUNCE_MAGENTA);
         addBasicBounceFlammable(ModBlocksImpl.BASIC_BOUNCE_PINK);
 
+        addBasicBounceFlammable(ModBlocksImpl.BASIC_BOUNCE_STAIR_WHITE);
+        addBasicBounceFlammable(ModBlocksImpl.BASIC_BOUNCE_STAIR_LIGHT_GRAY);
+        addBasicBounceFlammable(ModBlocksImpl.BASIC_BOUNCE_STAIR_GRAY);
+        addBasicBounceFlammable(ModBlocksImpl.BASIC_BOUNCE_STAIR_BLACK);
+        addBasicBounceFlammable(ModBlocksImpl.BASIC_BOUNCE_STAIR_BROWN);
+        addBasicBounceFlammable(ModBlocksImpl.BASIC_BOUNCE_STAIR_RED);
+        addBasicBounceFlammable(ModBlocksImpl.BASIC_BOUNCE_STAIR_ORANGE);
+        addBasicBounceFlammable(ModBlocksImpl.BASIC_BOUNCE_STAIR_YELLOW);
+        addBasicBounceFlammable(ModBlocksImpl.BASIC_BOUNCE_STAIR_LIME);
+        addBasicBounceFlammable(ModBlocksImpl.BASIC_BOUNCE_STAIR_GREEN);
+        addBasicBounceFlammable(ModBlocksImpl.BASIC_BOUNCE_STAIR_CYAN);
+        addBasicBounceFlammable(ModBlocksImpl.BASIC_BOUNCE_STAIR_LIGHT_BLUE);
+        addBasicBounceFlammable(ModBlocksImpl.BASIC_BOUNCE_STAIR_BLUE);
+        addBasicBounceFlammable(ModBlocksImpl.BASIC_BOUNCE_STAIR_PURPLE);
+        addBasicBounceFlammable(ModBlocksImpl.BASIC_BOUNCE_STAIR_MAGENTA);
+        addBasicBounceFlammable(ModBlocksImpl.BASIC_BOUNCE_STAIR_PINK);
+
+        addBasicBounceFlammable(ModBlocksImpl.BASIC_BOUNCE_SLAB_WHITE);
+        addBasicBounceFlammable(ModBlocksImpl.BASIC_BOUNCE_SLAB_LIGHT_GRAY);
+        addBasicBounceFlammable(ModBlocksImpl.BASIC_BOUNCE_SLAB_GRAY);
+        addBasicBounceFlammable(ModBlocksImpl.BASIC_BOUNCE_SLAB_BLACK);
+        addBasicBounceFlammable(ModBlocksImpl.BASIC_BOUNCE_SLAB_BROWN);
+        addBasicBounceFlammable(ModBlocksImpl.BASIC_BOUNCE_SLAB_RED);
+        addBasicBounceFlammable(ModBlocksImpl.BASIC_BOUNCE_SLAB_ORANGE);
+        addBasicBounceFlammable(ModBlocksImpl.BASIC_BOUNCE_SLAB_YELLOW);
+        addBasicBounceFlammable(ModBlocksImpl.BASIC_BOUNCE_SLAB_LIME);
+        addBasicBounceFlammable(ModBlocksImpl.BASIC_BOUNCE_SLAB_GREEN);
+        addBasicBounceFlammable(ModBlocksImpl.BASIC_BOUNCE_SLAB_CYAN);
+        addBasicBounceFlammable(ModBlocksImpl.BASIC_BOUNCE_SLAB_LIGHT_BLUE);
+        addBasicBounceFlammable(ModBlocksImpl.BASIC_BOUNCE_SLAB_BLUE);
+        addBasicBounceFlammable(ModBlocksImpl.BASIC_BOUNCE_SLAB_PURPLE);
+        addBasicBounceFlammable(ModBlocksImpl.BASIC_BOUNCE_SLAB_MAGENTA);
+        addBasicBounceFlammable(ModBlocksImpl.BASIC_BOUNCE_SLAB_PINK);
+
         addBasicBounceFlammable(ModBlocksImpl.BASIC_BOUNCE_WALL_WHITE);
         addBasicBounceFlammable(ModBlocksImpl.BASIC_BOUNCE_WALL_LIGHT_GRAY);
         addBasicBounceFlammable(ModBlocksImpl.BASIC_BOUNCE_WALL_GRAY);
@@ -48,7 +83,7 @@ public class CommonSetup {
     }
 
     private static void addBasicBounceFlammable(Block block) {
-        addFlammable(block, AbstractBreezeBounceBlock.FLAMMABILITY, AbstractBreezeBounceBlock.FIRE_SPREAD);
+        addFlammable(block, SimpleBreezeBounceBlock.FLAMMABILITY, SimpleBreezeBounceBlock.FIRE_SPREAD);
     }
 
     private static void addFlammable(Block block, int burn, int spread) {

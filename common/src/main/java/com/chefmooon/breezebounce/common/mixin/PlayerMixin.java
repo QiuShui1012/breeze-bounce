@@ -1,6 +1,6 @@
 package com.chefmooon.breezebounce.common.mixin;
 
-import com.chefmooon.breezebounce.common.block.AbstractBreezeBounceBlock;
+import com.chefmooon.breezebounce.common.block.SimpleBreezeBounceBlock;
 import net.minecraft.core.BlockPos;
 import net.minecraft.sounds.SoundSource;
 import net.minecraft.world.entity.player.Player;
@@ -14,15 +14,15 @@ import org.spongepowered.asm.mixin.injection.callback.CallbackInfo;
 @Mixin(Player.class)
 public abstract class PlayerMixin {
 
-    @Inject(method = "Lnet/minecraft/world/entity/player/Player;jumpFromGround()V", at = @At("TAIL"))
-    public void windJump(CallbackInfo ci) {
+    @Inject(method = "jumpFromGround()V", at = @At("TAIL"))
+    public void breezeBounceJump(CallbackInfo ci) {
         Player player = (Player) (Object) this;
         Level level = player.level();
 
         BlockPos blockPos = player.getOnPos();
         Block block = level.getBlockState(blockPos).getBlock();
-        if (block instanceof AbstractBreezeBounceBlock) {
-            level.playSound(player, player.getOnPos(), AbstractBreezeBounceBlock.getBounceSound(), SoundSource.BLOCKS, 0.7F, 0.5F);
+        if (block instanceof SimpleBreezeBounceBlock simpleBreezeBounceBlock) {
+            level.playSound(player, player.getOnPos(), simpleBreezeBounceBlock.getBounceSound(), SoundSource.BLOCKS, 0.7F, 0.5F);
         }
     }
 }

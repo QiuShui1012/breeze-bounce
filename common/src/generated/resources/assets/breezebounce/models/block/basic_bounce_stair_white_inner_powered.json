@@ -1,0 +1,8 @@
+{
+  "parent": "minecraft:block/inner_stairs",
+  "textures": {
+    "bottom": "breezebounce:block/basic_bounce_white_powered",
+    "side": "breezebounce:block/basic_bounce_white_powered",
+    "top": "breezebounce:block/basic_bounce_white_powered"
+  }
+}

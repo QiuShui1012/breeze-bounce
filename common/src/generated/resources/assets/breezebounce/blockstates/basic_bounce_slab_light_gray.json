@@ -1,0 +1,22 @@
+{
+  "variants": {
+    "powered=false,type=bottom": {
+      "model": "breezebounce:block/basic_bounce_slab_light_gray"
+    },
+    "powered=false,type=double": {
+      "model": "breezebounce:block/basic_bounce_light_gray"
+    },
+    "powered=false,type=top": {
+      "model": "breezebounce:block/basic_bounce_slab_light_gray_top"
+    },
+    "powered=true,type=bottom": {
+      "model": "breezebounce:block/basic_bounce_slab_light_gray_powered"
+    },
+    "powered=true,type=double": {
+      "model": "breezebounce:block/basic_bounce_light_gray_powered"
+    },
+    "powered=true,type=top": {
+      "model": "breezebounce:block/basic_bounce_slab_light_gray_top_powered"
+    }
+  }
+}

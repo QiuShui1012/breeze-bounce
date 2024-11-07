@@ -1,6 +1,6 @@
 package com.chefmooon.breezebounce.common.mixin;
 
-import com.chefmooon.breezebounce.common.block.AbstractBreezeBounceBlock;
+import com.chefmooon.breezebounce.common.block.SimpleBreezeBounceBlock;
 import net.minecraft.core.BlockPos;
 import net.minecraft.core.Direction;
 import net.minecraft.world.entity.Entity;
@@ -10,6 +10,7 @@ import net.minecraft.world.level.block.Block;
 import net.minecraft.world.level.block.state.BlockState;
 import net.minecraft.world.phys.Vec3;
 import org.spongepowered.asm.mixin.Mixin;
+import org.spongepowered.asm.mixin.Unique;
 import org.spongepowered.asm.mixin.injection.At;
 import org.spongepowered.asm.mixin.injection.Inject;
 import org.spongepowered.asm.mixin.injection.callback.CallbackInfo;
@@ -18,7 +19,7 @@ import org.spongepowered.asm.mixin.injection.callback.CallbackInfo;
 public abstract class EntityMixin {
 
     // note - is this the best option for collision detection? Similar to block.updateEntityAfterFallOn(), Might rework
-    @Inject(method = "Lnet/minecraft/world/entity/Entity;move(Lnet/minecraft/world/entity/MoverType;Lnet/minecraft/world/phys/Vec3;)V", at = @At("TAIL"))
+    @Inject(method = "move(Lnet/minecraft/world/entity/MoverType;Lnet/minecraft/world/phys/Vec3;)V", at = @At("TAIL"))
     public void bounceBack(MoverType moverType, Vec3 vec3, CallbackInfo ci) {
         Entity entity = (Entity) (Object) this;
         Level level = entity.level();
@@ -32,7 +33,7 @@ public abstract class EntityMixin {
                 if (direction != Direction.DOWN && direction != Direction.UP) {
                     BlockState upperBlockState = level.getBlockState(upperBlockPos);
                     Block upperBlock = level.getBlockState(upperBlockPos).getBlock();
-                    if (upperBlock instanceof AbstractBreezeBounceBlock upperBreezeBounceBlock) {
+                    if (upperBlock instanceof SimpleBreezeBounceBlock upperBreezeBounceBlock) {
                         validSideCollision(level, upperBreezeBounceBlock, upperBlockState, upperBlockPos, entity, vec3);
                     }  else if (isStanding(entity)){
                         double entityY = (entity.getY() > 0 ? entity.getY() : entity.getOnPos().getY());
@@ -43,14 +44,14 @@ public abstract class EntityMixin {
                         }
                         BlockState lowerBlockState = level.getBlockState(lowerBlockPos);
                         Block lowerBlock = level.getBlockState(lowerBlockPos).getBlock();
-                        if (lowerBlock instanceof AbstractBreezeBounceBlock lowerBreezeBounceBlock) {
+                        if (lowerBlock instanceof SimpleBreezeBounceBlock lowerBreezeBounceBlock) {
                             validSideCollision(level, lowerBreezeBounceBlock, lowerBlockState, lowerBlockPos, entity, vec3);
                         } else {
                             BlockPos middleBlockPos = upperBlockPos.below();
                             if (middleBlockPos.getY() != lowerBlockPos.getY()) {
                                 BlockState middleBlockState = level.getBlockState(middleBlockPos);
                                 Block middleBlock = level.getBlockState(middleBlockPos).getBlock();
-                                if (middleBlock instanceof AbstractBreezeBounceBlock middleBreezeBounceBlock) {
+                                if (middleBlock instanceof SimpleBreezeBounceBlock middleBreezeBounceBlock) {
                                     validSideCollision(level, middleBreezeBounceBlock, middleBlockState, middleBlockPos, entity, vec3);
                                 }
                             }
@@ -71,7 +72,7 @@ public abstract class EntityMixin {
                 BlockState blockState = level.getBlockState(blockPos);
                 Block block = level.getBlockState(blockPos).getBlock();
                 if (direction == Direction.UP) {
-                    if (block instanceof AbstractBreezeBounceBlock windBounceBlock) {
+                    if (block instanceof SimpleBreezeBounceBlock windBounceBlock) {
                         windBounceBlock.updateEntityAfterFlyUp(level, blockState, blockPos, entity, vec3);
                     }
                 }
@@ -79,10 +80,12 @@ public abstract class EntityMixin {
         }
     }
 
-    private void validSideCollision(Level level, AbstractBreezeBounceBlock block, BlockState blockState, BlockPos blockPos, Entity entity, Vec3 vec3) {
+    @Unique
+    private void validSideCollision(Level level, SimpleBreezeBounceBlock block, BlockState blockState, BlockPos blockPos, Entity entity, Vec3 vec3) {
         block.updateEntityAfterSideCollision(level, blockState, blockPos, entity, vec3);
     }
 
+    @Unique
     private boolean isStanding(Entity entity) {
         return entity.getEyeHeight() > 0.5f;
     }

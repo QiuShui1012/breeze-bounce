@@ -1,0 +1,414 @@
+{
+  "variants": {
+    "facing=east,half=bottom,powered=false,shape=inner_left": {
+      "model": "breezebounce:block/basic_bounce_stair_yellow_inner",
+      "uvlock": true,
+      "y": 270
+    },
+    "facing=east,half=bottom,powered=false,shape=inner_right": {
+      "model": "breezebounce:block/basic_bounce_stair_yellow_inner"
+    },
+    "facing=east,half=bottom,powered=false,shape=outer_left": {
+      "model": "breezebounce:block/basic_bounce_stair_yellow_outer",
+      "uvlock": true,
+      "y": 270
+    },
+    "facing=east,half=bottom,powered=false,shape=outer_right": {
+      "model": "breezebounce:block/basic_bounce_stair_yellow_outer"
+    },
+    "facing=east,half=bottom,powered=false,shape=straight": {
+      "model": "breezebounce:block/basic_bounce_stair_yellow_straight"
+    },
+    "facing=east,half=bottom,powered=true,shape=inner_left": {
+      "model": "breezebounce:block/basic_bounce_stair_yellow_inner_powered",
+      "uvlock": true,
+      "y": 270
+    },
+    "facing=east,half=bottom,powered=true,shape=inner_right": {
+      "model": "breezebounce:block/basic_bounce_stair_yellow_inner_powered"
+    },
+    "facing=east,half=bottom,powered=true,shape=outer_left": {
+      "model": "breezebounce:block/basic_bounce_stair_yellow_outer_powered",
+      "uvlock": true,
+      "y": 270
+    },
+    "facing=east,half=bottom,powered=true,shape=outer_right": {
+      "model": "breezebounce:block/basic_bounce_stair_yellow_outer_powered"
+    },
+    "facing=east,half=bottom,powered=true,shape=straight": {
+      "model": "breezebounce:block/basic_bounce_stair_yellow_straight_powered"
+    },
+    "facing=east,half=top,powered=false,shape=inner_left": {
+      "model": "breezebounce:block/basic_bounce_stair_yellow_inner",
+      "uvlock": true,
+      "x": 180
+    },
+    "facing=east,half=top,powered=false,shape=inner_right": {
+      "model": "breezebounce:block/basic_bounce_stair_yellow_inner",
+      "uvlock": true,
+      "x": 180,
+      "y": 90
+    },
+    "facing=east,half=top,powered=false,shape=outer_left": {
+      "model": "breezebounce:block/basic_bounce_stair_yellow_outer",
+      "uvlock": true,
+      "x": 180
+    },
+    "facing=east,half=top,powered=false,shape=outer_right": {
+      "model": "breezebounce:block/basic_bounce_stair_yellow_outer",
+      "uvlock": true,
+      "x": 180,
+      "y": 90
+    },
+    "facing=east,half=top,powered=false,shape=straight": {
+      "model": "breezebounce:block/basic_bounce_stair_yellow_straight",
+      "uvlock": true,
+      "x": 180
+    },
+    "facing=east,half=top,powered=true,shape=inner_left": {
+      "model": "breezebounce:block/basic_bounce_stair_yellow_inner_powered",
+      "uvlock": true,
+      "x": 180
+    },
+    "facing=east,half=top,powered=true,shape=inner_right": {
+      "model": "breezebounce:block/basic_bounce_stair_yellow_inner_powered",
+      "uvlock": true,
+      "x": 180,
+      "y": 90
+    },
+    "facing=east,half=top,powered=true,shape=outer_left": {
+      "model": "breezebounce:block/basic_bounce_stair_yellow_outer_powered",
+      "uvlock": true,
+      "x": 180
+    },
+    "facing=east,half=top,powered=true,shape=outer_right": {
+      "model": "breezebounce:block/basic_bounce_stair_yellow_outer_powered",
+      "uvlock": true,
+      "x": 180,
+      "y": 90
+    },
+    "facing=east,half=top,powered=true,shape=straight": {
+      "model": "breezebounce:block/basic_bounce_stair_yellow_straight_powered",
+      "uvlock": true,
+      "x": 180
+    },
+    "facing=north,half=bottom,powered=false,shape=inner_left": {
+      "model": "breezebounce:block/basic_bounce_stair_yellow_inner",
+      "uvlock": true,
+      "y": 180
+    },
+    "facing=north,half=bottom,powered=false,shape=inner_right": {
+      "model": "breezebounce:block/basic_bounce_stair_yellow_inner",
+      "uvlock": true,
+      "y": 270
+    },
+    "facing=north,half=bottom,powered=false,shape=outer_left": {
+      "model": "breezebounce:block/basic_bounce_stair_yellow_outer",
+      "uvlock": true,
+      "y": 180
+    },
+    "facing=north,half=bottom,powered=false,shape=outer_right": {
+      "model": "breezebounce:block/basic_bounce_stair_yellow_outer",
+      "uvlock": true,
+      "y": 270
+    },
+    "facing=north,half=bottom,powered=false,shape=straight": {
+      "model": "breezebounce:block/basic_bounce_stair_yellow_straight",
+      "uvlock": true,
+      "y": 270
+    },
+    "facing=north,half=bottom,powered=true,shape=inner_left": {
+      "model": "breezebounce:block/basic_bounce_stair_yellow_inner_powered",
+      "uvlock": true,
+      "y": 180
+    },
+    "facing=north,half=bottom,powered=true,shape=inner_right": {
+      "model": "breezebounce:block/basic_bounce_stair_yellow_inner_powered",
+      "uvlock": true,
+      "y": 270
+    },
+    "facing=north,half=bottom,powered=true,shape=outer_left": {
+      "model": "breezebounce:block/basic_bounce_stair_yellow_outer_powered",
+      "uvlock": true,
+      "y": 180
+    },
+    "facing=north,half=bottom,powered=true,shape=outer_right": {
+      "model": "breezebounce:block/basic_bounce_stair_yellow_outer_powered",
+      "uvlock": true,
+      "y": 270
+    },
+    "facing=north,half=bottom,powered=true,shape=straight": {
+      "model": "breezebounce:block/basic_bounce_stair_yellow_straight_powered",
+      "uvlock": true,
+      "y": 270
+    },
+    "facing=north,half=top,powered=false,shape=inner_left": {
+      "model": "breezebounce:block/basic_bounce_stair_yellow_inner",
+      "uvlock": true,
+      "x": 180,
+      "y": 270
+    },
+    "facing=north,half=top,powered=false,shape=inner_right": {
+      "model": "breezebounce:block/basic_bounce_stair_yellow_inner",
+      "uvlock": true,
+      "x": 180
+    },
+    "facing=north,half=top,powered=false,shape=outer_left": {
+      "model": "breezebounce:block/basic_bounce_stair_yellow_outer",
+      "uvlock": true,
+      "x": 180,
+      "y": 270
+    },
+    "facing=north,half=top,powered=false,shape=outer_right": {
+      "model": "breezebounce:block/basic_bounce_stair_yellow_outer",
+      "uvlock": true,
+      "x": 180
+    },
+    "facing=north,half=top,powered=false,shape=straight": {
+      "model": "breezebounce:block/basic_bounce_stair_yellow_straight",
+      "uvlock": true,
+      "x": 180,
+      "y": 270
+    },
+    "facing=north,half=top,powered=true,shape=inner_left": {
+      "model": "breezebounce:block/basic_bounce_stair_yellow_inner_powered",
+      "uvlock": true,
+      "x": 180,
+      "y": 270
+    },
+    "facing=north,half=top,powered=true,shape=inner_right": {
+      "model": "breezebounce:block/basic_bounce_stair_yellow_inner_powered",
+      "uvlock": true,
+      "x": 180
+    },
+    "facing=north,half=top,powered=true,shape=outer_left": {
+      "model": "breezebounce:block/basic_bounce_stair_yellow_outer_powered",
+      "uvlock": true,
+      "x": 180,
+      "y": 270
+    },
+    "facing=north,half=top,powered=true,shape=outer_right": {
+      "model": "breezebounce:block/basic_bounce_stair_yellow_outer_powered",
+      "uvlock": true,
+      "x": 180
+    },
+    "facing=north,half=top,powered=true,shape=straight": {
+      "model": "breezebounce:block/basic_bounce_stair_yellow_straight_powered",
+      "uvlock": true,
+      "x": 180,
+      "y": 270
+    },
+    "facing=south,half=bottom,powered=false,shape=inner_left": {
+      "model": "breezebounce:block/basic_bounce_stair_yellow_inner"
+    },
+    "facing=south,half=bottom,powered=false,shape=inner_right": {
+      "model": "breezebounce:block/basic_bounce_stair_yellow_inner",
+      "uvlock": true,
+      "y": 90
+    },
+    "facing=south,half=bottom,powered=false,shape=outer_left": {
+      "model": "breezebounce:block/basic_bounce_stair_yellow_outer"
+    },
+    "facing=south,half=bottom,powered=false,shape=outer_right": {
+      "model": "breezebounce:block/basic_bounce_stair_yellow_outer",
+      "uvlock": true,
+      "y": 90
+    },
+    "facing=south,half=bottom,powered=false,shape=straight": {
+      "model": "breezebounce:block/basic_bounce_stair_yellow_straight",
+      "uvlock": true,
+      "y": 90
+    },
+    "facing=south,half=bottom,powered=true,shape=inner_left": {
+      "model": "breezebounce:block/basic_bounce_stair_yellow_inner_powered"
+    },
+    "facing=south,half=bottom,powered=true,shape=inner_right": {
+      "model": "breezebounce:block/basic_bounce_stair_yellow_inner_powered",
+      "uvlock": true,
+      "y": 90
+    },
+    "facing=south,half=bottom,powered=true,shape=outer_left": {
+      "model": "breezebounce:block/basic_bounce_stair_yellow_outer_powered"
+    },
+    "facing=south,half=bottom,powered=true,shape=outer_right": {
+      "model": "breezebounce:block/basic_bounce_stair_yellow_outer_powered",
+      "uvlock": true,
+      "y": 90
+    },
+    "facing=south,half=bottom,powered=true,shape=straight": {
+      "model": "breezebounce:block/basic_bounce_stair_yellow_straight_powered",
+      "uvlock": true,
+      "y": 90
+    },
+    "facing=south,half=top,powered=false,shape=inner_left": {
+      "model": "breezebounce:block/basic_bounce_stair_yellow_inner",
+      "uvlock": true,
+      "x": 180,
+      "y": 90
+    },
+    "facing=south,half=top,powered=false,shape=inner_right": {
+      "model": "breezebounce:block/basic_bounce_stair_yellow_inner",
+      "uvlock": true,
+      "x": 180,
+      "y": 180
+    },
+    "facing=south,half=top,powered=false,shape=outer_left": {
+      "model": "breezebounce:block/basic_bounce_stair_yellow_outer",
+      "uvlock": true,
+      "x": 180,
+      "y": 90
+    },
+    "facing=south,half=top,powered=false,shape=outer_right": {
+      "model": "breezebounce:block/basic_bounce_stair_yellow_outer",
+      "uvlock": true,
+      "x": 180,
+      "y": 180
+    },
+    "facing=south,half=top,powered=false,shape=straight": {
+      "model": "breezebounce:block/basic_bounce_stair_yellow_straight",
+      "uvlock": true,
+      "x": 180,
+      "y": 90
+    },
+    "facing=south,half=top,powered=true,shape=inner_left": {
+      "model": "breezebounce:block/basic_bounce_stair_yellow_inner_powered",
+      "uvlock": true,
+      "x": 180,
+      "y": 90
+    },
+    "facing=south,half=top,powered=true,shape=inner_right": {
+      "model": "breezebounce:block/basic_bounce_stair_yellow_inner_powered",
+      "uvlock": true,
+      "x": 180,
+      "y": 180
+    },
+    "facing=south,half=top,powered=true,shape=outer_left": {
+      "model": "breezebounce:block/basic_bounce_stair_yellow_outer_powered",
+      "uvlock": true,
+      "x": 180,
+      "y": 90
+    },
+    "facing=south,half=top,powered=true,shape=outer_right": {
+      "model": "breezebounce:block/basic_bounce_stair_yellow_outer_powered",
+      "uvlock": true,
+      "x": 180,
+      "y": 180
+    },
+    "facing=south,half=top,powered=true,shape=straight": {
+      "model": "breezebounce:block/basic_bounce_stair_yellow_straight_powered",
+      "uvlock": true,
+      "x": 180,
+      "y": 90
+    },
+    "facing=west,half=bottom,powered=false,shape=inner_left": {
+      "model": "breezebounce:block/basic_bounce_stair_yellow_inner",
+      "uvlock": true,
+      "y": 90
+    },
+    "facing=west,half=bottom,powered=false,shape=inner_right": {
+      "model": "breezebounce:block/basic_bounce_stair_yellow_inner",
+      "uvlock": true,
+      "y": 180
+    },
+    "facing=west,half=bottom,powered=false,shape=outer_left": {
+      "model": "breezebounce:block/basic_bounce_stair_yellow_outer",
+      "uvlock": true,
+      "y": 90
+    },
+    "facing=west,half=bottom,powered=false,shape=outer_right": {
+      "model": "breezebounce:block/basic_bounce_stair_yellow_outer",
+      "uvlock": true,
+      "y": 180
+    },
+    "facing=west,half=bottom,powered=false,shape=straight": {
+      "model": "breezebounce:block/basic_bounce_stair_yellow_straight",
+      "uvlock": true,
+      "y": 180
+    },
+    "facing=west,half=bottom,powered=true,shape=inner_left": {
+      "model": "breezebounce:block/basic_bounce_stair_yellow_inner_powered",
+      "uvlock": true,
+      "y": 90
+    },
+    "facing=west,half=bottom,powered=true,shape=inner_right": {
+      "model": "breezebounce:block/basic_bounce_stair_yellow_inner_powered",
+      "uvlock": true,
+      "y": 180
+    },
+    "facing=west,half=bottom,powered=true,shape=outer_left": {
+      "model": "breezebounce:block/basic_bounce_stair_yellow_outer_powered",
+      "uvlock": true,
+      "y": 90
+    },
+    "facing=west,half=bottom,powered=true,shape=outer_right": {
+      "model": "breezebounce:block/basic_bounce_stair_yellow_outer_powered",
+      "uvlock": true,
+      "y": 180
+    },
+    "facing=west,half=bottom,powered=true,shape=straight": {
+      "model": "breezebounce:block/basic_bounce_stair_yellow_straight_powered",
+      "uvlock": true,
+      "y": 180
+    },
+    "facing=west,half=top,powered=false,shape=inner_left": {
+      "model": "breezebounce:block/basic_bounce_stair_yellow_inner",
+      "uvlock": true,
+      "x": 180,
+      "y": 180
+    },
+    "facing=west,half=top,powered=false,shape=inner_right": {
+      "model": "breezebounce:block/basic_bounce_stair_yellow_inner",
+      "uvlock": true,
+      "x": 180,
+      "y": 270
+    },
+    "facing=west,half=top,powered=false,shape=outer_left": {
+      "model": "breezebounce:block/basic_bounce_stair_yellow_outer",
+      "uvlock": true,
+      "x": 180,
+      "y": 180
+    },
+    "facing=west,half=top,powered=false,shape=outer_right": {
+      "model": "breezebounce:block/basic_bounce_stair_yellow_outer",
+      "uvlock": true,
+      "x": 180,
+      "y": 270
+    },
+    "facing=west,half=top,powered=false,shape=straight": {
+      "model": "breezebounce:block/basic_bounce_stair_yellow_straight",
+      "uvlock": true,
+      "x": 180,
+      "y": 180
+    },
+    "facing=west,half=top,powered=true,shape=inner_left": {
+      "model": "breezebounce:block/basic_bounce_stair_yellow_inner_powered",
+      "uvlock": true,
+      "x": 180,
+      "y": 180
+    },
+    "facing=west,half=top,powered=true,shape=inner_right": {
+      "model": "breezebounce:block/basic_bounce_stair_yellow_inner_powered",
+      "uvlock": true,
+      "x": 180,
+      "y": 270
+    },
+    "facing=west,half=top,powered=true,shape=outer_left": {
+      "model": "breezebounce:block/basic_bounce_stair_yellow_outer_powered",
+      "uvlock": true,
+      "x": 180,
+      "y": 180
+    },
+    "facing=west,half=top,powered=true,shape=outer_right": {
+      "model": "breezebounce:block/basic_bounce_stair_yellow_outer_powered",
+      "uvlock": true,
+      "x": 180,
+      "y": 270
+    },
+    "facing=west,half=top,powered=true,shape=straight": {
+      "model": "breezebounce:block/basic_bounce_stair_yellow_straight_powered",
+      "uvlock": true,
+      "x": 180,
+      "y": 180
+    }
+  }
+}
