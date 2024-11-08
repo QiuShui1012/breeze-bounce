@@ -72,7 +72,6 @@ public class ModModelGenerator extends FabricModelProvider {
     }
 
     private void createBasicBounceStair(Block fullBlock, Block stairBlock, BlockModelGenerators blockStateModelGenerator) {
-        // TODO powered state
         TextureMapping mapping = TextureMapping.singleSlot(TextureSlot.BOTTOM, ModelLocationUtils.getModelLocation(fullBlock))
                 .put(TextureSlot.TOP, ModelLocationUtils.getModelLocation(fullBlock))
                 .put(TextureSlot.SIDE, ModelLocationUtils.getModelLocation(fullBlock));

@@ -34,26 +34,34 @@ bounce power for a set duration.
   - Player Step
   - Inflate / Deflate
 
-### Bounce Post Block
+### Bounce Stair Block
 
 This block has similar properties to the Bounce Block but is the shape of a fence post.
+
+- Recipe: 6x Bounce Blocks -> 4x Bounce Stair Blocks
+- Colours: White, Light Gray, Gray, Black, Brown, Red, Orange, Yellow, Lime, Green,
+  Cyan, Light Blue, Blue, Purple, Magenta, Pink
+
+### Bounce Slab Block
+
+This block has similar properties to the Bounce Block but is the shape of a fence post.
+
+- Recipe: 3x Bounce Blocks -> 6x Bounce Slab Blocks
+- Colours: White, Light Gray, Gray, Black, Brown, Red, Orange, Yellow, Lime, Green,
+  Cyan, Light Blue, Blue, Purple, Magenta, Pink
+
+### Bounce Post Block
+
+This block has similar properties to the Bounce Block but is the shape of a fence post. It
+can also be placed horizontally.
 
 - Recipe: 2x Bounce Blocks -> 8x Bounce Post Blocks
 - Colours: White, Light Gray, Gray, Black, Brown, Red, Orange, Yellow, Lime, Green,
   Cyan, Light Blue, Blue, Purple, Magenta, Pink
 
-***Technical Info***
-- When struck by a Wind Charge becomes inflated for 80 ticks 
-- Can be Waterlogged
-- Flammable and can be ignited by Lava
-- Custom Sounds
-  - When Player jumps
-  - When Player bounces all sides
-    - Pitch increase with greater velocity
-  - Player Step
-  - Inflate / Deflate
+***
 
-### Supported Versions
+## Supported Versions
 ***
 Breeze Bounce supports [Fabric](https://fabricmc.net) and [NeoForge](https://neoforged.net) for Minecraft 1.21+.
 
@@ -77,16 +85,8 @@ Please submit bugs [here](https://github.com/ChefMooon/breeze-bounce/issues)
     - 2.4 blocks allows the player to double bounce on and only on the initial jump from
       a Bounce block
     - Similar to how you would double bounce your friends on a trampoline
-  - More particle colours
   - Improve Collision Detection
     - I have ideas but no more brain power
-
-- Bounce Post Block Improvements
-  - Ability to place it horizontally
-  - Improve collision shape
-
-- More Bounce Block Variants
-  - Slab, Stair, Wall
 
 - Planned Config Options
   - Bounce Block

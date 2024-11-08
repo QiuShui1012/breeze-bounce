@@ -113,8 +113,8 @@ public class BreezeBounceSlabBlock extends SlabBlock implements SimpleBreezeBoun
                 Direction.Axis axis = direction.getAxis();
                 double e = axis == Direction.Axis.X ? 0.5 + d * (double) direction.getStepX() : (double) randomSource.nextFloat();
                 double f = switch(slabType) {
-                    case SlabType.BOTTOM -> randomSource.nextFloat() * 0.5;
-                    case SlabType.TOP -> 0.5 + (randomSource.nextFloat() * 0.5);
+                    case SlabType.BOTTOM -> d * (double) randomSource.nextFloat();
+                    case SlabType.TOP -> 0.48 + d * (double) randomSource.nextFloat();
                     default -> axis == Direction.Axis.Y ? 0.5 + d * (double) direction.getStepY() : (double) randomSource.nextFloat();
                 };
                 double g = axis == Direction.Axis.Z ? 0.5 + d * (double) direction.getStepZ() : (double) randomSource.nextFloat();

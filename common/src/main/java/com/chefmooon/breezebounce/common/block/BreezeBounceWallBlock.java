@@ -90,17 +90,41 @@ public class BreezeBounceWallBlock extends BreezeBounceBlock implements SimpleWa
     }
 
     @Override
+    public void animateTick(BlockState blockState, Level level, BlockPos blockPos, RandomSource randomSource) {
+        if ((Boolean)blockState.getValue(POWERED)) {
+            this.spawnParticles(level, blockPos);
+        }
+    }
+
+    @Override
     public void spawnParticles(Level level, BlockPos blockPos) {
-        double d = 0.0625;
+        double d = 0.1625;
+        double dNorm = 0.5625;
         RandomSource randomSource = level.random;
         Direction[] directions = Direction.values();
 
+        Direction.Axis facingAxis = level.getBlockState(blockPos).getValue(AXIS);
+
         for (Direction direction : directions) {
             Direction.Axis axis = direction.getAxis();
-            double e = axis == Direction.Axis.X ? 0.5 + d * (double) direction.getStepX() : (double) randomSource.nextFloat();
-            double f = axis == Direction.Axis.Y ? 0.5 + d * (double) direction.getStepY() : (double) randomSource.nextFloat();
-            double g = axis == Direction.Axis.Z ? 0.5 + d * (double) direction.getStepZ() : (double) randomSource.nextFloat();
-            level.addParticle(ModParticleTypes.BOUNCE_WHITE.get(), (double) blockPos.getX() + e, (double) blockPos.getY() + f, (double) blockPos.getZ() + g, 0.0, 0.0, 0.0);
+            if (facingAxis == axis) {
+                BlockPos blockPos2 = blockPos.relative(direction);
+                if (level.getBlockState(blockPos2).isSolidRender(level, blockPos2)) {
+                    continue;
+                }
+            }
+
+            double e = axis == Direction.Axis.X ? d * (double) direction.getStepX() : (double) randomSource.nextFloat() * 0.4 - 0.2;
+            double f = axis == Direction.Axis.Y ? d * (double) direction.getStepY() : (double) randomSource.nextFloat() * 0.4 - 0.2;
+            double g = axis == Direction.Axis.Z ? d * (double) direction.getStepZ() : (double) randomSource.nextFloat() * 0.4 - 0.2;
+            if (facingAxis == Direction.Axis.X) {
+                e = axis == Direction.Axis.X ? dNorm * (double) direction.getStepX() : (double) randomSource.nextFloat() - 0.5;
+            } else if (facingAxis == Direction.Axis.Y) {
+                f = axis == Direction.Axis.Y ? dNorm * (double) direction.getStepY() : (double) randomSource.nextFloat() - 0.5;
+            } else if (facingAxis == Direction.Axis.Z) {
+                g = axis == Direction.Axis.Z ? dNorm * (double) direction.getStepZ() : (double) randomSource.nextFloat() - 0.5;
+            }
+            level.addParticle(ModParticleTypes.BOUNCE_WHITE.get(), blockPos.getCenter().x() + e, blockPos.getCenter().y() + f, blockPos.getCenter().z() + g, 0.0, 0.0, 0.0);
         }
     }
 

@@ -96,23 +96,72 @@ public class BreezeBounceStairBlock extends StairBlock implements SimpleBreezeBo
     }
 
     @Override
+    public void animateTick(BlockState blockState, Level level, BlockPos blockPos, RandomSource randomSource) {
+        if ((Boolean)blockState.getValue(POWERED)) {
+            this.spawnParticles(level, blockPos);
+        }
+    }
+
+    @Override
     public void spawnParticles(Level level, BlockPos blockPos) {
         double d = 0.5625;
         RandomSource randomSource = level.random;
         Direction[] directions = Direction.values();
 
-        // TODO improve these particles, use this blockState
         BlockState blockState = level.getBlockState(blockPos);
+        Half half = blockState.getValue(HALF);
+        Direction facing = blockState.getValue(FACING);
 
         for (Direction direction : directions) {
             BlockPos blockPos2 = blockPos.relative(direction);
             if (!level.getBlockState(blockPos2).isSolidRender(level, blockPos2)) {
-                Direction.Axis axis = direction.getAxis();
-                double e = axis == Direction.Axis.X ? 0.5 + d * (double) direction.getStepX() : (double) randomSource.nextFloat();
-                double f = axis == Direction.Axis.Y ? 0.5 + d * (double) direction.getStepY() : (double) randomSource.nextFloat();
-                double g = axis == Direction.Axis.Z ? 0.5 + d * (double) direction.getStepZ() : (double) randomSource.nextFloat();
-                level.addParticle(ModParticleTypes.BOUNCE_WHITE.get(), (double) blockPos.getX() + e, (double) blockPos.getY() + f, (double) blockPos.getZ() + g, 0.0, 0.0, 0.0);
+                spawnSlabParticles(level, blockPos, randomSource, direction, half, facing, d);
+                spawnOtherParticles(level, blockPos, randomSource, direction, half, facing, d);
             }
+        }
+    }
+
+    private void spawnSlabParticles(Level level, BlockPos blockPos, RandomSource randomSource, Direction direction, Half half, Direction facing, double d) {
+        boolean canSpawn = !((direction == Direction.UP && half == Half.TOP) || (direction == Direction.DOWN && half == Half.BOTTOM));
+        if (canSpawn) {
+            Direction.Axis axis = direction.getAxis();
+            double e = axis == Direction.Axis.X ? 0.5 + d * (double) direction.getStepX() : (double) randomSource.nextFloat();
+            double f = switch(half) {
+                case Half.BOTTOM -> d * (double) randomSource.nextFloat();
+                case Half.TOP -> 0.48 + d * (double) randomSource.nextFloat();
+            };
+            double g = axis == Direction.Axis.Z ? 0.5 + d * (double) direction.getStepZ() : (double) randomSource.nextFloat();
+            level.addParticle(ModParticleTypes.BOUNCE_WHITE.get(), (double) blockPos.getX() + e, (double) blockPos.getY() + f, (double) blockPos.getZ() + g, 0.0, 0.0, 0.0);
+        }
+    }
+
+    private void spawnOtherParticles(Level level, BlockPos blockPos, RandomSource randomSource, Direction direction, Half half, Direction facing, double d) {
+        boolean canSpawn = !((direction == Direction.UP && half == Half.TOP) || (direction == Direction.DOWN && half == Half.BOTTOM));
+        if (canSpawn) {
+            Direction.Axis axis = direction.getAxis();
+            double e;
+            if (facing == Direction.EAST || facing == Direction.WEST) {
+                e = switch(facing.getAxisDirection()) {
+                    case NEGATIVE ->  d * (double) randomSource.nextFloat();
+                    case POSITIVE -> 0.5 + d * (double) randomSource.nextFloat();
+                };
+            } else {
+                e = axis == Direction.Axis.X ? 0.5 + d * (double) direction.getStepX() : (double) randomSource.nextFloat();
+            }
+            double f = switch(half) {
+                case Half.TOP -> d * (double) randomSource.nextFloat();
+                case Half.BOTTOM -> 0.5 + d * (double) randomSource.nextFloat();
+            };
+            double g;
+            if (facing == Direction.NORTH || facing == Direction.SOUTH) {
+                g = switch (facing.getAxisDirection()) {
+                    case NEGATIVE -> d * (double) randomSource.nextFloat();
+                    case POSITIVE -> 0.5 + d * (double) randomSource.nextFloat();
+                };
+            } else {
+                g = axis == Direction.Axis.Z ? 0.5 + d * (double) direction.getStepZ() : (double) randomSource.nextFloat();
+            }
+            level.addParticle(ModParticleTypes.BOUNCE_WHITE.get(), (double) blockPos.getX() + e, (double) blockPos.getY() + f, (double) blockPos.getZ() + g, 0.0, 0.0, 0.0);
         }
     }
 }
