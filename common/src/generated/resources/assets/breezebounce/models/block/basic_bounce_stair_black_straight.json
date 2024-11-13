@@ -1,0 +1,8 @@
+{
+  "parent": "minecraft:block/stairs",
+  "textures": {
+    "bottom": "breezebounce:block/basic_bounce_black",
+    "side": "breezebounce:block/basic_bounce_black",
+    "top": "breezebounce:block/basic_bounce_black"
+  }
+}

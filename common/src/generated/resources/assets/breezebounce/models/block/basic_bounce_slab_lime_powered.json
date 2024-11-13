@@ -1,0 +1,8 @@
+{
+  "parent": "minecraft:block/slab",
+  "textures": {
+    "bottom": "breezebounce:block/basic_bounce_lime_powered",
+    "side": "breezebounce:block/basic_bounce_slab_lime_side_bottom_powered",
+    "top": "breezebounce:block/basic_bounce_lime_powered"
+  }
+}

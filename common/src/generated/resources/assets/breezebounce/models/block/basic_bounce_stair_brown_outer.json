@@ -1,0 +1,8 @@
+{
+  "parent": "minecraft:block/outer_stairs",
+  "textures": {
+    "bottom": "breezebounce:block/basic_bounce_brown",
+    "side": "breezebounce:block/basic_bounce_brown",
+    "top": "breezebounce:block/basic_bounce_brown"
+  }
+}

@@ -1,0 +1,8 @@
+{
+  "parent": "minecraft:block/slab_top",
+  "textures": {
+    "bottom": "breezebounce:block/basic_bounce_light_gray",
+    "side": "breezebounce:block/basic_bounce_slab_light_gray_side_top",
+    "top": "breezebounce:block/basic_bounce_light_gray"
+  }
+}

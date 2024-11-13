@@ -1,0 +1,22 @@
+{
+  "variants": {
+    "powered=false,type=bottom": {
+      "model": "breezebounce:block/basic_bounce_slab_purple"
+    },
+    "powered=false,type=double": {
+      "model": "breezebounce:block/basic_bounce_purple"
+    },
+    "powered=false,type=top": {
+      "model": "breezebounce:block/basic_bounce_slab_purple_top"
+    },
+    "powered=true,type=bottom": {
+      "model": "breezebounce:block/basic_bounce_slab_purple_powered"
+    },
+    "powered=true,type=double": {
+      "model": "breezebounce:block/basic_bounce_purple_powered"
+    },
+    "powered=true,type=top": {
+      "model": "breezebounce:block/basic_bounce_slab_purple_top_powered"
+    }
+  }
+}
